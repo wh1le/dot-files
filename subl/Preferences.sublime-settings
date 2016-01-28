@@ -1,0 +1,27 @@
+{
+  //general settings
+  "ignored_packages":
+  [
+    "Vintage"
+  ],
+  "scroll_past_end": true,
+  "auto_complete_with_fields": true,
+  "show_panel_on_build": false,
+  "fold_buttons": false,
+   
+  //theme settings
+  "color_scheme": "Packages/Color Scheme - Default/LastNight.tmTheme",
+  "theme": "Spacegray.sublime-theme",
+
+  //font-settigs
+  "font_size": 14.0,
+  "line_padding_bottom": 1,
+  "line_padding_top": 1,
+  "translate_tabs_to_spaces": true,
+   "bold_folder_labels": true,
+  //style settings
+  "margin": 2,
+  "tab_size": 2,
+  "use_tab_stops": false,
+  "enable_tab_scrolling": true
+}
