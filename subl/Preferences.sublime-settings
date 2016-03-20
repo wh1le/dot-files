@@ -1,27 +1,25 @@
 {
-  //general settings
+  "auto_complete_with_fields": true,
+  "bold_folder_labels": true,
+  "color_scheme": "Packages/Theme - amCoder/amCoder (Bright).tmTheme",
+  "draw_white_space": "tabs",
+  "enable_tab_scrolling": true,
+  "fold_buttons": false,
+  "font_size": 14.0,
   "ignored_packages":
   [
-    "Vintage"
   ],
-  "scroll_past_end": true,
-  "auto_complete_with_fields": true,
-  "show_panel_on_build": false,
-  "fold_buttons": false,
-   
-  //theme settings
-  "color_scheme": "Packages/Color Scheme - Default/LastNight.tmTheme",
-  "theme": "Spacegray.sublime-theme",
-
-  //font-settigs
-  "font_size": 14.0,
   "line_padding_bottom": 1,
   "line_padding_top": 1,
-  "translate_tabs_to_spaces": true,
-   "bold_folder_labels": true,
-  //style settings
   "margin": 2,
+  "scroll_past_end": true,
+  "show_panel_on_build": false,
   "tab_size": 2,
+  "theme": "Spacegray.sublime-theme",
+  "theme_primer_sidebar_font_large": true,
+  "theme_primer_sidebar_tree_small": true,
+  "theme_primer_tabs_font_large": true,
+  "translate_tabs_to_spaces": true,
   "use_tab_stops": false,
-  "enable_tab_scrolling": true
+  "word_wrap": false
 }
