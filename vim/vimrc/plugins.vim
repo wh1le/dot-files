@@ -14,4 +14,13 @@ Plug 'https://github.com/garbas/vim-snipmate.git'             " autocomplete
 
 Plug 'https://github.com/itchyny/lightline.vim.git'
 Plug 'https://github.com/edkolev/tmuxline.vim.git'
+Plug 'https://github.com/thoughtbot/vim-rspec.git'
+Plug 'https://github.com/tpope/vim-endwise.git'               " autoend
+
+Plug 'https://github.com/vim-ruby/vim-ruby.git'
+Plug 'https://github.com/losingkeys/vim-niji.git'             " scheme
+Plug 'https://github.com/sjl/tslime.vim.git'
+Plug 'https://github.com/kchmck/vim-coffee-script.git'
 call plug#end()
+
+
