@@ -21,6 +21,11 @@ Plug 'https://github.com/vim-ruby/vim-ruby.git'
 Plug 'https://github.com/losingkeys/vim-niji.git'             " scheme
 Plug 'https://github.com/sjl/tslime.vim.git'
 Plug 'https://github.com/kchmck/vim-coffee-script.git'
+Plug 'https://github.com/terryma/vim-multiple-cursors.git'    " multiple-cursors
+Plug 'https://github.com/tpope/vim-surround.git'              " manipulate with bracket
+Plug 'https://github.com/scrooloose/syntastic.git'            " check syntax
+Plug 'https://github.com/tpope/vim-commentary.git'            " manupulate comentary
+Plug 'https://github.com/tpope/vim-rails.git'                  " rails
 call plug#end()
 
 
