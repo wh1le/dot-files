@@ -69,7 +69,7 @@ endif
 set ruler
 
 " Height of the command bar
-set cmdheight=2
+set cmdheight=1
 
 " A buffer becomes hidden when it is abandoned
 set hid
@@ -155,7 +155,7 @@ set tw=500
 
 set ai "Auto indent
 set si "Smart indent
-set wrap "Wrap lines
+" set wrap "Wrap lines
 
 
 """"""""""""""""""""""""""""""

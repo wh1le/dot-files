@@ -25,7 +25,13 @@ Plug 'https://github.com/terryma/vim-multiple-cursors.git'    " multiple-cursors
 Plug 'https://github.com/tpope/vim-surround.git'              " manipulate with bracket
 Plug 'https://github.com/scrooloose/syntastic.git'            " check syntax
 Plug 'https://github.com/tpope/vim-commentary.git'            " manupulate comentary
-Plug 'https://github.com/tpope/vim-rails.git'                  " rails
+Plug 'https://github.com/tpope/vim-rails.git'                 " rails
+Plug 'https://github.com/KabbAmine/vCoolor.vim.git'           " color picker
+Plug 'https://github.com/ngmy/vim-rubocop.git'                " rubocop  
+Plug 'https://github.com/jiangmiao/auto-pairs.git'            " auto cloused branch and quotes
+Plug 'https://github.com/ervandew/supertab.git'               " autocomplit
+Plug 'https://github.com/tpope/vim-dispatch.git'              " rspec
+Plug 'https://github.com/skalnik/vim-vroom.git'               " rspec
+Plug 'https://github.com/othree/html5.vim.git'
+Plug 'https://github.com/vim-scripts/ctags.vim.git'           " search by project
 call plug#end()
-
-

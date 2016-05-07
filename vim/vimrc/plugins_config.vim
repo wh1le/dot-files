@@ -6,23 +6,23 @@ let NERDTreeShowHidden=0
 let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 let g:NERDTreeWinSize=30
 
-map <leader>nb :NERDTreeFromBookmark 
-
 nmap <C-\> :NERDTreeFind<CR>
 nmap <silent> <leader><leader> :NERDTreeToggle<CR>
+
 
 
 
 """"""""""""""""""""""""""""""
 " => CTRL-P
 """"""""""""""""""""""""""""""
-let g:ctrlp_working_path_mode = 1 
+" let g:ctrlp_working_path_mode = 1 
+let g:ctrlp_working_path_mode = 'ra'
 
 let g:ctrlp_map = '<c-p>'
 map <leader>j :CtrlP<cr>
 map <c-b> :CtrlPBuffer<cr>
 
-let g:ctrlp_max_height = 5
+let g:ctrlp_max_height = 15
 let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee|^tmp\cache\'
 
 """"""""""""""""""""""""""""""
@@ -58,13 +58,6 @@ let g:multi_cursor_next_key="\<C-s>"
 vmap Si S(i_<esc>f)
 au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => surround.vim config
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-vmap Si S(i_<esc>f)
-au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-airline config (force color)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -76,3 +69,15 @@ au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gitgutter_enabled=0
 nnoremap <silent> <leader>d :GitGutterToggle<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => syntasic
+let g:loaded_syntastic_ruby_rubocop_checker = 1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => ctags
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:auto_ctags = 1
+let g:auto_ctags_directory_list = ['.git', '.svn']
+let g:auto_ctags_tags_name = 'tags'
+let g:auto_ctags_tags_args = '--tag-relative --recurse --sort=yes'
+let g:auto_ctags_filetype_mode = 1

@@ -15,15 +15,42 @@ let g:niji_dark_colours = [
     \ ]
 set nowrap
 let mapleader=","
-
-if $COLORTERM == 'gnome-terminal'
-  set t_Co=256
-endif
-
 " Allow to copy/paste between VIM instances
 " "copy the current visual selection to ~/.vbuf
 vmap <Leader>y :w! ~/.vbuf<CR>
-" "copy the current line to the buffer file if no visual selection
+"copy the current line to the buffer file if no visual selection
 nmap <Leader>y :.w! ~/.vbuf<CR>
-" "paste the contents of the buffer file
+"paste the contents of the buffer file
 nmap <Leader>p :r ~/.vbuf<CR>
+
+"p previous buffer
+map <leader>p :bp<CR> 
+"n next buffer
+map <leader>n :bn<CR> 
+"d delete buffer
+map <leader>d :bd<CR> 
+
+let g:vroom_map_keys = 0
+" tmux with dispatch plugin
+" run test with seus, if zues not active, switches to bundle exec
+let g:vroom_use_seus = 1
+let g:vroom_use_colors = 1
+" let g:vroom_use_dispatch = 1
+map <Leader>c :call vroom#RunTestFile()<CR>
+map <Leader>s :call vroom#RunNearestTest()<CR>
+" jump to test file
+map <leader>t :A<CR>
+
+inoremap <Up> <NOP>
+inoremap <Down> <NOP>
+inoremap <Left> <NOP>
+inoremap <Right> <NOP>
+noremap  <Up> <NOP>
+noremap  <Down> <NOP>
+noremap  <Left> <NOP>
+noremap  <Right> <NOP>
+
+
+let g:multi_cursor_use_default_mapping = 1
+
+
