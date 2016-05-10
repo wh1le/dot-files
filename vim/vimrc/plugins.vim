@@ -1,5 +1,8 @@
 call plug#begin()
 Plug 'scwood/vim-hybrid'
+Plug 'https://github.com/vim-airline/vim-airline.git'         " powerline
+Plug 'vim-airline/vim-airline-themes'
+" Plug 'https://github.com/jmcantrell/vim-virtualenv.git'       " powerline theme
 Plug 'https://github.com/slim-template/vim-slim.git'          " slim syntax
 Plug 'https://github.com/scrooloose/nerdtree.git'             " navigation tree
 Plug 'https://github.com/kien/ctrlp.vim.git'                  " fast navigation
@@ -12,7 +15,7 @@ Plug 'https://github.com/MarcWeber/vim-addon-mw-utils.git'    " autocomplete
 Plug 'https://github.com/tomtom/tlib_vim.git'                 " autocomplete
 Plug 'https://github.com/garbas/vim-snipmate.git'             " autocomplete
 
-Plug 'https://github.com/itchyny/lightline.vim.git'
+" Plug 'https://github.com/itchyny/lightline.vim.git'
 Plug 'https://github.com/edkolev/tmuxline.vim.git'
 Plug 'https://github.com/thoughtbot/vim-rspec.git'
 Plug 'https://github.com/tpope/vim-endwise.git'               " autoend

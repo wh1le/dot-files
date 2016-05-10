@@ -1,8 +1,8 @@
+
 source ~/.vim/vimrc/plugins.vim
 source ~/.vim/vimrc/basic.vim
 source ~/.vim/vimrc/plugins_config.vim
 
-autocmd filetype lisp,scheme,art setlocal equalprg=scmindent.rkt
 let g:niji_dark_colours = [
     \ [ '81', '#5fd7ff'],
     \ [ '99', '#875fff'],
