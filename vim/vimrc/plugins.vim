@@ -1,5 +1,8 @@
 call plug#begin()
 Plug 'scwood/vim-hybrid'
+Plug 'https://github.com/whatyouhide/vim-gotham.git'
+Plug 'https://github.com/scheakur/vim-scheakur.git'
+Plug 'https://github.com/kristijanhusak/vim-hybrid-material.git' " color schemes
 Plug 'https://github.com/vim-airline/vim-airline.git'         " powerline
 Plug 'vim-airline/vim-airline-themes'
 " Plug 'https://github.com/jmcantrell/vim-virtualenv.git'       " powerline theme

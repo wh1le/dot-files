@@ -1,8 +1,14 @@
 set number
 
-syntax on
+syntax enable
+let g:enable_bold_font = 1
 set background=dark
 colorscheme hybrid
+" colorscheme hybrid_reverse
+" colorscheme hybrid_material
+" colorscheme gotham256
+
+let g:jellybeans_use_lowcolor_black = 0
 
 if has("mac") || has("macunix")
     set gfn=Hack:h14,Source\ Code\ Pro:h15,Menlo:h15
@@ -61,7 +67,6 @@ if has("win16") || has("win32")
 else
     set wildignore+=.git\*,.hg\*,.svn\*
 endif
-
 
 "Always show current position
 set ruler
@@ -282,6 +287,8 @@ vnoremap <silent> gv :call VisualSelection('gv', '')<CR>
 
 " Open Ag and put the cursor in the right position
 map <leader>g :Ag 
+" Open bash
+map <leader>] :sh<CR>
 
 " When you press <leader>r you can search and replace the selected text
 vnoremap <silent> <leader>r :call VisualSelection('replace', '')<CR>
