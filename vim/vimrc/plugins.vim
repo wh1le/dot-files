@@ -1,8 +1,17 @@
 call plug#begin()
+" color schemes 
 Plug 'scwood/vim-hybrid'
 Plug 'https://github.com/whatyouhide/vim-gotham.git'
 Plug 'https://github.com/scheakur/vim-scheakur.git'
-Plug 'https://github.com/kristijanhusak/vim-hybrid-material.git' " color schemes
+Plug 'https://github.com/kristijanhusak/vim-hybrid-material.git' 
+Plug 'https://github.com/fxn/vim-monochrome.git' 
+Plug 'https://github.com/kristiandupont/shades-of-teal.git' " deap blue
+Plug 'https://github.com/tyrannicaltoucan/vim-deep-space.git'
+Plug 'https://github.com/jyota/vimColors.git' " red
+Plug 'https://github.com/sickill/vim-monokai.git'
+" end color schemes
+Plug 'https://github.com/godlygeek/csapprox.git'
+Plug 'crusoexia/vim-dracula'
 Plug 'https://github.com/vim-airline/vim-airline.git'         " powerline
 Plug 'vim-airline/vim-airline-themes'
 " Plug 'https://github.com/jmcantrell/vim-virtualenv.git'       " powerline theme

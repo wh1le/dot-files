@@ -2,11 +2,19 @@ set number
 
 syntax enable
 let g:enable_bold_font = 1
-set background=dark
-colorscheme hybrid
+" colorscheme dracula
+" colorscheme monochrome
+" colorscheme shades-of-teal
+" colorscheme gotham256
+" colorscheme monokai
+
 " colorscheme hybrid_reverse
 " colorscheme hybrid_material
-" colorscheme gotham256
+
+set background=dark
+" colorscheme deep-space
+colorscheme hybrid
+
 
 let g:jellybeans_use_lowcolor_black = 0
 
