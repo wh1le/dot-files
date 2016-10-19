@@ -1,12 +1,25 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/nick/.oh-my-zsh
+export TERM=xterm-256color
+
+archey
+bindkey -v
+
+# BASE16_SHELL="$HOME/.config/base16-shell/scripts/base16-default-dark.sh"
+[[ -s $BASE16_SHELL  ]] && source $BASE16_SHELL
+
+# git diff
+function gd {
+ git diff $1 $2 --color | diff-so-fancy | less
+}
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
-# ZSH_THEME="Honukai"
+ZSH_THEME="honukai"
+# ZSH_THEME="wezm"
+# ZSH_THEME="random"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -81,10 +94,26 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+# alias gd="git diff --color | diff-so-fancy | less"
+alias gs="git status"
 alias be="bundle exec"
 alias bes="bundle exec spring"
+alias src="spring rails c"
 alias -g ret="RAILS_ENV=test"
 alias -g red="RAILS_ENV=development"
 alias -g det="DB_ENV=test"
 alias -g ded="DB_ENV=development"
+
+alias -g cpdep="cap production deploy"
+alias -g cppr="cap production"
+
 export PATH="/usr/local/sbin:$PATH"
+
+# git diff
+function gd {
+ git diff $1 $2 --color | diff-so-fancy | less
+}
+
+function go_to_work {
+  cd ~/CODE/work/$1/$2
+}
