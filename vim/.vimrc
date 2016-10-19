@@ -3,16 +3,16 @@ source ~/.vim/vimrc/plugins.vim
 source ~/.vim/vimrc/basic.vim
 source ~/.vim/vimrc/plugins_config.vim
 
-let g:niji_dark_colours = [
-    \ [ '81', '#5fd7ff'],
-    \ [ '99', '#875fff'],
-    \ [ '1',  '#dc322f'],
-    \ [ '76', '#5fd700'],
-    \ [ '3',  '#b58900'],
-    \ [ '2',  '#859900'],
-    \ [ '6',  '#2aa198'],
-    \ [ '4',  '#268bd2'],
-    \ ]
+" let g:niji_dark_colours = [
+"     \ [ '81', '#5fd7ff'],
+"     \ [ '99', '#875fff'],
+"     \ [ '1',  '#dc322f'],
+"     \ [ '76', '#5fd700'],
+"     \ [ '3',  '#b58900'],
+"     \ [ '2',  '#859900'],
+"     \ [ '6',  '#2aa198'],
+"     \ [ '4',  '#268bd2'],
+"     \ ]
 set nowrap
 let mapleader=","
 " Allow to copy/paste between VIM instances
@@ -49,8 +49,3 @@ noremap  <Up> <NOP>
 noremap  <Down> <NOP>
 noremap  <Left> <NOP>
 noremap  <Right> <NOP>
-
-
-let g:multi_cursor_use_default_mapping = 1
-
-

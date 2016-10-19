@@ -22,9 +22,19 @@ let g:ctrlp_map = '<c-p>'
 map <leader>j :CtrlP<cr>
 map <c-b> :CtrlPBuffer<cr>
 
+set wildignore+=*/tmp/*,*/node_modules/*,*.git/,*/uploads/*
 let g:ctrlp_max_height = 7
 let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee|^tmp\cache\'
 
+"
+""""""""""""""""""""""""""""""
+" => CommandT
+""""""""""""""""""""""""""""""
+let g:CommandTCancelMap=['<C-x>', '<C-c>']
+let g:CommandTMaxHeight = 15
+let g:CommandTSmartCase = 1
+let g:CommandTWildIgnore=&wildignore . ",*/bower_components"
+set wildignore+=*.o,*.obj,tmp/,.git/
 """"""""""""""""""""""""""""""
 " => ZenCoding
 """"""""""""""""""""""""""""""
@@ -73,19 +83,26 @@ nnoremap <silent> <leader>d :GitGutterToggle<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => syntasic
 let g:loaded_syntastic_ruby_rubocop_checker = 1
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => ctags
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:auto_ctags = 1
-let g:auto_ctags_directory_list = ['.git', '.svn']
-let g:auto_ctags_tags_name = 'tags'
-let g:auto_ctags_tags_args = '--tag-relative --recurse --sort=yes'
-let g:auto_ctags_filetype_mode = 1
+" let g:auto_ctags = 1
+" let g:auto_ctags_directory_list = ['.git', '.svn']
+" let g:auto_ctags_tags_name = 'tags'
+" let g:auto_ctags_tags_args = '--tag-relative --recurse --sort=yes'
+" let g:auto_ctags_filetype_mode = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => easytags
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:easytags_always_enabled = 1
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => powerline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:airline_powerline_fonts = 1
-let g:airline_theme='powerlineish'
+let g:airline_theme='bubblegum'
 " let g:airline_theme='gotham256'
 

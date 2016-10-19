@@ -1,25 +1,14 @@
 set number
 
 syntax enable
-let g:enable_bold_font = 1
-" colorscheme dracula
-" colorscheme monochrome
-" colorscheme shades-of-teal
-" colorscheme gotham256
-" colorscheme monokai
-
-" colorscheme hybrid_reverse
-" colorscheme hybrid_material
-
 set background=dark
-" colorscheme deep-space
 colorscheme hybrid
 
-
-let g:jellybeans_use_lowcolor_black = 0
+" set list
+" set listchars=space:-
 
 if has("mac") || has("macunix")
-    set gfn=Hack:h14,Source\ Code\ Pro:h15,Menlo:h15
+    set gfn=Hack:h13 ",Source\ Code\ Pro:h15,Menlo:h15
 elseif has("win16") || has("win32")
     set gfn=Hack:h14,Source\ Code\ Pro:h12,Bitstream\ Vera\ Sans\ Mono:h11
 elseif has("gui_gtk2")
@@ -38,6 +27,7 @@ filetype indent on
 " Set to auto read when a file is changed from the outside
 set autoread
 
+set grepprg=ack
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
