@@ -1,8 +1,10 @@
 set number
 
 syntax enable
-set background=dark
-colorscheme hybrid
+" set background=dark
+" colorscheme hybrid
+" colorscheme railscasts
+colorscheme beekai
 
 " set list
 " set listchars=space:-
@@ -10,11 +12,16 @@ colorscheme hybrid
 if has("mac") || has("macunix")
     set gfn=Hack:h13 ",Source\ Code\ Pro:h15,Menlo:h15
 elseif has("win16") || has("win32")
-    set gfn=Hack:h14,Source\ Code\ Pro:h12,Bitstream\ Vera\ Sans\ Mono:h11
+    set gfn=Hack:h13,Source\ Code\ Pro:h12,Bitstream\ Vera\ Sans\ Mono:h11
 elseif has("gui_gtk2")
-    set gfn=Hack\ 14,Source\ Code\ Pro\ 12,Bitstream\ Vera\ Sans\ Mono\ 11
+    set gfn=Hack\ 13,Source\ Code\ Pro\ 12,Bitstream\ Vera\ Sans\ Mono\ 11
 elseif has("linux")
-    set gfn=Hack\ 14,Source\ Code\ Pro\ 12,Bitstream\ Vera\ Sans\ Mono\ 11
+    set gfn=Hack\ 13,Source\ Code\ Pro\ 12,Bitstream\ Vera\ Sans\ Mono\ 11
+endif
+
+" you should probably delete this
+if (has("termguicolors"))
+   set termguicolors
 endif
 
 " Sets how many lines of history VIM has to remember
@@ -27,7 +34,7 @@ filetype indent on
 " Set to auto read when a file is changed from the outside
 set autoread
 
-set grepprg=ack
+" set grepprg=ack
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
@@ -110,8 +117,6 @@ set tm=500
 
 " Add a bit extra margin to the left
 set foldcolumn=0
-
-
 
 " Set extra options when running in GUI mode
 if has("gui_running")

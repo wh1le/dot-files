@@ -82,7 +82,7 @@ nnoremap <silent> <leader>d :GitGutterToggle<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => syntasic
-let g:loaded_syntastic_ruby_rubocop_checker = 1
+" let g:loaded_syntastic_ruby_rubocop_checker = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => ctags
@@ -100,9 +100,17 @@ let g:easytags_always_enabled = 1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => powerline
+" => Powerline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:airline_powerline_fonts = 1
-let g:airline_theme='bubblegum'
-" let g:airline_theme='gotham256'
+" let g:airline_theme='bubblegum'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='tender'
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Rspec 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" let g:rspec_command = "spting rspec --drb {spec}"
+
 

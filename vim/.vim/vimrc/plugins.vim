@@ -3,10 +3,13 @@ call plug#begin()
 Plug 'scwood/vim-hybrid'
 Plug 'https://github.com/kristijanhusak/vim-hybrid-material.git' 
 Plug 'https://github.com/rakr/vim-two-firewatch.git'
-Plug 'https://github.com/gosukiwi/vim-atom-dark.git'
-Plug 'https://github.com/antlypls/vim-colors-codeschool.git'
-Plug 'https://github.com/cseelus/vim-colors-lucid.git'
+Plug 'https://github.com/kamwitsta/nordisk.git'
+Plug 'https://github.com/jacoborus/tender.vim.git'
+Plug 'https://github.com/justincampbell/vim-railscasts.git'
+Plug 'https://github.com/stephanedemotte/beekai.git'
 " end color schemes
+
+Plug 'https://github.com/mhinz/vim-startify.git'
 
 Plug 'https://github.com/vim-airline/vim-airline.git'         " powerline
 Plug 'vim-airline/vim-airline-themes'
@@ -24,7 +27,7 @@ Plug 'https://github.com/wincent/command-t.git'
 
 Plug 'https://github.com/terryma/vim-multiple-cursors.git'    " multiline like in sublime
 
-Plug 'https://github.com/tpope/vim-surround.git'              " change brackets
+" Plug 'https://github.com/tpope/vim-surround.git'              " change brackets
 
 Plug 'https://github.com/MarcWeber/vim-addon-manager.git'     " autocomplete
 Plug 'https://github.com/MarcWeber/vim-addon-mw-utils.git'    " autocomplete
@@ -33,23 +36,22 @@ Plug 'https://github.com/garbas/vim-snipmate.git'             " autocomplete
 Plug 'https://github.com/honza/vim-snippets.git'
 
 " Plug 'https://github.com/itchyny/lightline.vim.git'
-Plug 'https://github.com/edkolev/tmuxline.vim.git'
+" Plug 'https://github.com/edkolev/tmuxline.vim.git'
 Plug 'https://github.com/tpope/vim-endwise.git'               " autoend
-
-Plug 'https://github.com/losingkeys/vim-niji.git'             " raingbow brackets for slim
+" Plug 'https://github.com/losingkeys/vim-niji.git'             " raingbow brackets for slim
 
 " Plug 'https://github.com/Quramy/tsuquyomi.git'      " typescript
-Plug 'https://github.com/leafgarland/typescript-vim.git'
+" Plug 'https://github.com/leafgarland/typescript-vim.git'
 
 Plug 'https://github.com/kchmck/vim-coffee-script.git'
 Plug 'https://github.com/terryma/vim-multiple-cursors.git'    " multiple-cursors
 Plug 'https://github.com/tpope/vim-surround.git'              " manipulate with bracket
-Plug 'https://github.com/scrooloose/syntastic.git'            " check syntax
+" Plug 'https://github.com/scrooloose/syntastic.git'            " check syntax
 Plug 'https://github.com/tpope/vim-commentary.git'            " manupulate comentary
 Plug 'https://github.com/tpope/vim-rails.git'                 " rails
-Plug 'https://github.com/KabbAmine/vCoolor.vim.git'           " color picker
-Plug 'https://github.com/ngmy/vim-rubocop.git'                " rubocop  
-Plug 'https://github.com/ervandew/supertab.git'               " autocomplit
+" Plug 'https://github.com/KabbAmine/vCoolor.vim.git'           " color picker
+" Plug 'https://github.com/ngmy/vim-rubocop.git'                " rubocop  
+" Plug 'https://github.com/ervandew/supertab.git'               " autocomplit
 Plug 'https://github.com/tpope/vim-dispatch.git'              " rspec
 Plug 'https://github.com/skalnik/vim-vroom.git'               " rspec
 Plug 'https://github.com/xolox/vim-misc.git'                  " search by project
