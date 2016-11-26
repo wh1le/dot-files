@@ -107,10 +107,18 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='tender'
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vroom 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:vroom_use_spring = 1
+" let g:vroom_detect_spec_helper = 1
+let g:vroom_use_bundle_exec = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Rspec 
+" => IndientLine 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" let g:rspec_command = "spting rspec --drb {spec}"
-
+" let g:indentLine_setColors = 0
+let g:indentLine_char = '│'
+let g:indentLine_enabled = 1
+let g:indentLine_color_term = 236
 
