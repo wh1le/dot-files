@@ -14,6 +14,7 @@ source ~/.vim/vimrc/plugins_config.vim
 "     \ [ '4',  '#268bd2'],
 "     \ ]
 set nowrap
+set expandtab 
 let mapleader=","
 " Allow to copy/paste between VIM instances
 " "copy the current visual selection to ~/.vbuf

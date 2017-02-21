@@ -24,7 +24,7 @@ map <c-b> :CtrlPBuffer<cr>
 
 set wildignore+=*/tmp/*,*/node_modules/*,*.git/,*/uploads/*
 let g:ctrlp_max_height = 7
-let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee|^tmp\cache\'
+let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee|^tmp\cache\|system\'
 
 "
 """"""""""""""""""""""""""""""
@@ -122,3 +122,6 @@ let g:indentLine_char = '│'
 let g:indentLine_enabled = 1
 let g:indentLine_color_term = 236
 
+let g:numbers_exclude = ['tagbar', 'gundo', 'minibufexpl', 'nerdtree']
+
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml, *.jsx"

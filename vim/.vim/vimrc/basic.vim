@@ -1,10 +1,12 @@
 set number
+set conceallevel=0
 
 syntax enable
-" set background=dark
 " colorscheme hybrid
-" colorscheme railscasts
 colorscheme beekai
+" colorscheme nova
+let g:vim_jsx_pretty_enable_jsx_highlight=1
+
 
 " set list
 " set listchars=space:-
@@ -20,9 +22,9 @@ elseif has("linux")
 endif
 
 " you should probably delete this
-if (has("termguicolors"))
-   set termguicolors
-endif
+" if (has("termguicolors"))
+"    set termguicolors
+" endif
 
 " Sets how many lines of history VIM has to remember
 set history=500
@@ -122,7 +124,7 @@ set foldcolumn=0
 if has("gui_running")
     set guioptions-=T
     set guioptions-=e
-    set t_Co=256
+    " set t_Co=256
     set guitablabel=%M\ %t
 endif
 

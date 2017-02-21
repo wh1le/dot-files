@@ -4,10 +4,16 @@ call plug#begin()
 "Plug 'scwood/vim-hybrid'
 "Plug 'https://github.com/kristijanhusak/vim-hybrid-material.git' 
 Plug 'https://github.com/stephanedemotte/beekai.git'
+Plug 'https://github.com/kamwitsta/nordisk.git'
+Plug 'https://github.com/endel/vim-github-colorscheme.git'
+" Plug 'arcticicestudio/nord-vim'
+Plug 'https://github.com/fneu/breezy.git'
+Plug 'zanglg/nova.vim'
 
 " UI
 Plug 'https://github.com/Yggdroot/indentLine.git'
 Plug 'https://github.com/mhinz/vim-startify.git'
+Plug 'myusuf3/numbers.vim'
 
 Plug 'https://github.com/vim-airline/vim-airline.git'         " powerline
 Plug 'vim-airline/vim-airline-themes'
@@ -42,6 +48,8 @@ Plug 'https://github.com/losingkeys/vim-niji.git'             " raingbow bracket
 " Plug 'https://github.com/leafgarland/typescript-vim.git'
 
 Plug 'https://github.com/kchmck/vim-coffee-script.git'
+Plug 'https://github.com/tpope/vim-haml.git'
+
 Plug 'https://github.com/tpope/vim-surround.git'              " manipulate with bracket
 " Plug 'https://github.com/scrooloose/syntastic.git'            " check syntax
 Plug 'https://github.com/tpope/vim-commentary.git'            " manupulate comentary
@@ -54,6 +62,15 @@ Plug 'https://github.com/skalnik/vim-vroom.git'               " rspec
 Plug 'https://github.com/yonchu/accelerated-smooth-scroll.git'
 Plug 'https://github.com/jceb/vim-orgmode.git'
 Plug 'https://github.com/tpope/vim-speeddating.git'
+Plug 'https://github.com/dkprice/vim-easygrep.git'
+
+Plug 'godlygeek/tabular'
+Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'pangloss/vim-javascript'
+Plug 'https://github.com/mxw/vim-jsx.git'
+Plug 'alvan/vim-closetag'
+Plug 'https://github.com/jiangmiao/auto-pairs.git'
+
 " Plug 'https://github.com/xolox/vim-misc.git'                  " search by project
 " Plug 'https://github.com/xolox/vim-easytags.git'
 call plug#end()
