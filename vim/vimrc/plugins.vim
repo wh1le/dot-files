@@ -7,8 +7,11 @@ Plug 'https://github.com/stephanedemotte/beekai.git'
 Plug 'https://github.com/kamwitsta/nordisk.git'
 Plug 'https://github.com/endel/vim-github-colorscheme.git'
 " Plug 'arcticicestudio/nord-vim'
+Plug 'https://github.com/danilo-augusto/vim-afterglow.git'
 Plug 'https://github.com/fneu/breezy.git'
 Plug 'zanglg/nova.vim'
+Plug 'https://github.com/raggi/vim-color-raggi.git'
+Plug 'https://github.com/zanglg/nova.vim.git'
 
 " UI
 Plug 'https://github.com/Yggdroot/indentLine.git'
@@ -55,7 +58,6 @@ Plug 'https://github.com/tpope/vim-surround.git'              " manipulate with 
 Plug 'https://github.com/tpope/vim-commentary.git'            " manupulate comentary
 Plug 'https://github.com/tpope/vim-rails.git'                 " rails
 " Plug 'https://github.com/KabbAmine/vCoolor.vim.git'           " color picker
-" Plug 'https://github.com/ngmy/vim-rubocop.git'                " rubocop  
 Plug 'https://github.com/ervandew/supertab.git'               " autocomplit
 Plug 'https://github.com/tpope/vim-dispatch.git'              " rspec
 Plug 'https://github.com/skalnik/vim-vroom.git'               " rspec
@@ -70,6 +72,10 @@ Plug 'pangloss/vim-javascript'
 Plug 'https://github.com/mxw/vim-jsx.git'
 Plug 'alvan/vim-closetag'
 Plug 'https://github.com/jiangmiao/auto-pairs.git'
+
+" Code smell
+Plug 'https://github.com/rainerborene/vim-reek.git' " reek
+Plug 'https://github.com/ngmy/vim-rubocop.git'      " rubocop
 
 " Plug 'https://github.com/xolox/vim-misc.git'                  " search by project
 " Plug 'https://github.com/xolox/vim-easytags.git'

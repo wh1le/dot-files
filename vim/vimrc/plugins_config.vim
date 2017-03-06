@@ -125,3 +125,11 @@ let g:indentLine_color_term = 236
 let g:numbers_exclude = ['tagbar', 'gundo', 'minibufexpl', 'nerdtree']
 
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml, *.jsx"
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Reek 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:reek_always_show = 0
+let g:reek_line_limit = 1000
+let g:reek_on_loading = 0

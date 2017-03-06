@@ -4,7 +4,8 @@ set conceallevel=0
 syntax enable
 " colorscheme hybrid
 colorscheme beekai
-" colorscheme nova
+" colorscheme afterglow
+
 let g:vim_jsx_pretty_enable_jsx_highlight=1
 
 
