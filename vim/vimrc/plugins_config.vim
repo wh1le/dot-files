@@ -122,7 +122,7 @@ let g:indentLine_char = '│'
 let g:indentLine_enabled = 1
 let g:indentLine_color_term = 236
 
-let g:numbers_exclude = ['tagbar', 'gundo', 'minibufexpl', 'nerdtree']
+" let g:numbers_exclude = ['tagbar', 'gundo', 'minibufexpl', 'nerdtree']
 
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml, *.jsx"
 
@@ -133,3 +133,14 @@ let g:closetag_filenames = "*.html,*.xhtml,*.phtml, *.jsx"
 let g:reek_always_show = 0
 let g:reek_line_limit = 1000
 let g:reek_on_loading = 0
+
+let g:mta_use_matchparen_group = 1
+
+let g:mta_filetypes = {
+    \ 'html' : 1,
+    \ 'xhtml' : 1,
+    \ 'xml' : 1,
+    \ 'jinja' : 1,
+    \ 'jsx' : 1,
+    \ 'js' : 1,
+    \}
