@@ -4,9 +4,12 @@ set conceallevel=0
 syntax enable
 " colorscheme hybrid
 colorscheme beekai
-" colorscheme afterglow
+" colorscheme summerfruit256
+" colorscheme Tomorrow
+" colorscheme github
 
 let g:vim_jsx_pretty_enable_jsx_highlight=1
+set nuw=3
 
 
 " set list

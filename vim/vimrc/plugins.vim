@@ -4,6 +4,9 @@ call plug#begin()
 "Plug 'scwood/vim-hybrid'
 "Plug 'https://github.com/kristijanhusak/vim-hybrid-material.git' 
 Plug 'https://github.com/stephanedemotte/beekai.git'
+Plug 'https://github.com/vim-scripts/summerfruit256.vim.git'
+Plug 'https://github.com/chriskempson/vim-tomorrow-theme.git'
+Plug 'https://github.com/endel/vim-github-colorscheme.git'
 
 " UI
 Plug 'https://github.com/Yggdroot/indentLine.git'
