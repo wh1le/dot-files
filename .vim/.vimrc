@@ -3,18 +3,17 @@ source ~/.vim/vimrc/plugins.vim
 source ~/.vim/vimrc/basic.vim
 source ~/.vim/vimrc/plugins_config.vim
 
-let g:niji_dark_colours = [
-    \ [ '81', '#5fd7ff'],
-    \ [ '99', '#875fff'],
-    \ [ '1',  '#dc322f'],
-    \ [ '76', '#5fd700'],
-    \ [ '3',  '#b58900'],
-    \ [ '2',  '#859900'],
-    \ [ '6',  '#2aa198'],
-    \ [ '4',  '#268bd2'],
-    \ ]
+" let g:niji_dark_colours = [
+"     \ [ '81', '#5fd7ff'],
+"     \ [ '99', '#875fff'],
+"     \ [ '1',  '#dc322f'],
+"     \ [ '76', '#5fd700'],
+"     \ [ '3',  '#b58900'],
+"     \ [ '2',  '#859900'],
+"     \ [ '6',  '#2aa198'],
+"     \ [ '4',  '#268bd2'],
+"     \ ]
 set nowrap
-set expandtab 
 let mapleader=","
 " Allow to copy/paste between VIM instances
 " "copy the current visual selection to ~/.vbuf
@@ -50,11 +49,3 @@ noremap  <Up> <NOP>
 noremap  <Down> <NOP>
 noremap  <Left> <NOP>
 noremap  <Right> <NOP>
-
-set t_Co=256
-
-" set your color scheme (replace wombat with whatever yours is called)
-" if you're using a gvim or macvim, then your color scheme may have a version
-" that uses more than 256 colors
-" turn on language specific syntax highlighting
-syntax on
