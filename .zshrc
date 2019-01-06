@@ -1,25 +1,29 @@
+# source ~/.zsh/colors
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/nick/.oh-my-zsh
-export TERM=xterm-256color
+export ZSH=/Users/nikitamiloserdov/.oh-my-zsh
 
-plugins=(vi-like, git, rails, web-search, bower, encode64, git-flow, osx)
-# archey
-bindkey -v
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="theunraveler"
+# ZSH_THEME="candy"
+# ZSH_THEME="mikeh"
+# ZSH_THEME="bureau"
+# ZSH_THEME="Soliah"
 
-# BASE16_SHELL="$HOME/.config/base16-shell/scripts/base16-default-dark.sh" [[ -s $BASE16_SHELL  ]] && source $BASE16_SHELL
+# ZSH_THEME="duellj"
+#
+# Set list of themes to load
+# Setting this variable when ZSH_THEME=random
+# cause zsh load theme from this variable instead of
+# looking in ~/.oh-my-zsh/themes/
+# An empty array have no effect
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
-# git diff
-function gd {
- git diff $1 $2 --color | diff-so-fancy | less
-}
-
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-# ZSH_THEME="xiong-chiamiov-plus"
-# ZSH_THEME="sorin"
-ZSH_THEME="af-magic"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -43,7 +47,7 @@ ZSH_THEME="af-magic"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-COMPLETION_WAITING_DOTS="true"
+# COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -62,12 +66,15 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-# User configuration
-
-export PATH="/Users/nick/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-# export MANPATH="/usr/local/man:$MANPATH"
+plugins=(
+  git
+)
 
 source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+# export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -83,7 +90,7 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -93,27 +100,18 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-# alias gd="git diff --color | diff-so-fancy | less"
-
+alias be='bundle exec'
+alias srs='rails s'
+alias src='rails c'
 alias gs="git status"
-alias be="bundle exec"
-alias bes="bundle exec spring"
 
-alias src="spring rails c"
-alias srs="spring rails s"
+alias edit_tmux="vim ~/.tmux.conf"
+alias edit_vim="vim ~/.vim"
 
-alias -g ret="RAILS_ENV=test"
-alias -g red="RAILS_ENV=development"
-alias -g det="DB_ENV=test"
-alias -g ded="DB_ENV=development"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-alias -g cpdep="cap production deploy"
-alias -g cppr="cap production"
-alias -g subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl .'
-
-# commit with number of branch
 function cwn {
-  git commit -m "#$(git branch | grep \* | grep -o '[0-9]..' | head -1): $1"
+  git commit -m "$1"
 }
 
 # git diff
@@ -125,13 +123,42 @@ function go_to_work {
   cd ~/CODE/work/$1/$2
 }
 
+function upwork {
+  cd ~/Desktop/work
+}
+
 function connect_to_server {
   ssh -i ~/.ssh/gitgub -4 nick@51.15.71.142
+}
+
+function dsleep {
+  pmset sleepnow
+}
+
+function eweb {
+  docker-compose exec rails $1 $2 $3 $4 $5
 }
 
 function kill_by_name {
   ps ax | grep $1 | grep -v grep | awk '{print $1}' | xargs kill
 }
 
-export PATH="/usr/local/sbin:$PATH"
-export PATH="/usr/local/opt/qt/bin:$PATH"
+function connect_to_logs { bash ~/.scripts/connect_to_logs.sh }
+function tmuker { bash ~/.scripts/tmux_with_docker.sh }
+function v { nvim }
+
+export PATH="$(brew --prefix qt@5.5)/bin:$PATH"
+export LC_ALL=en_US.UTF-8
+
+eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
+
+function exportCurrentPathToGlobalVar { export PWD="$(echo pwd)"; }
+preexec() { export PWD="$(echo pwd)"; }
+
+echo "$(tput setaf 4)$(cat ~/.hello-msg) $(tput setab 7)"
+
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+        eval "$("$BASE16_SHELL/profile_helper.sh")"
