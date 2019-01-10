@@ -1,3 +1,12 @@
+export ZSH="/Users/nikitamiloserdov/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
+
+plugins=(
+  git
+)
+
+source $ZSH/oh-my-zsh.sh
+
 typeset -A __NIKITA
 
 fpath=($HOME/.zsh/completions $fpath)
@@ -25,16 +34,17 @@ zstyle ':completion:*:complete:(cd|pushd):*' tag-order 'local-directories named-
 
 # Categorize completion suggestions with headings:
 zstyle ':completion:*' group-name ''
-zstyle ':completion:*:descriptions' format %F{default}%B%{$__WINCENT[ITALIC_ON]%}--- %d ---%{$__WINCENT[ITALIC_OFF]%}%b
+zstyle ':completion:*:descriptions' format %F{default}%B%{$__NIKITA[ITALIC_ON]%}--- %d ---%{$__NIKITA[ITALIC_OFF]%}%b
 
 autoload -U colors
 colors
 
+# http://zsh.sourceforge.net/Doc/Release/User-Contributions.html
 # autoload -Uz vcs_info
 # zstyle ':vcs_info:*' enable git hg
 # zstyle ':vcs_info:*' check-for-changes true
-# zstyle ':vcs_info:*' stagedstr "%F{green}●%f" # default 'S'
-# zstyle ':vcs_info:*' unstagedstr "%F{red}●%f" # default 'U'
+# zstyle ':vcs_info:*' stagedstr " %F{green}●%f " # default 'S'
+# zstyle ':vcs_info:*' unstagedstr " %F{red}●%f " # default 'U'
 # zstyle ':vcs_info:*' use-simple true
 # zstyle ':vcs_info:git+set-message:*' hooks git-untracked
 # zstyle ':vcs_info:git*:*' formats '[%b%m%c%u] ' # default ' (%s)-[%b]%c%u-'
@@ -73,11 +83,44 @@ colors
 #   fi
 # }
 
+# RPROMPT_BASE="\${vcs_info_msg_0_}%F{blue}%~%f"
+# setopt PROMPT_SUBST
+
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=59'
 
-RPROMPT_BASE="\${vcs_info_msg_0_}%F{blue}%~%f"
-setopt PROMPT_SUBST
+# Anonymous function to avoid leaking variables.
+# http://www.manpagez.com/man/1/zshmisc/ - SIMPLE PROMPT ESCAPES
+
+# function () {
+#   # Check for tmux by looking at $TERM, because $TMUX won't be propagated to any
+#   # nested sudo shells but $TERM will.
+#   local TMUXING=$([[ "$TERM" =~ "tmux" ]] && echo tmux)
+#   if [ -n "$TMUXING" -a -n "$TMUX" ]; then
+#     # In a a tmux session created in a non-root or root shell.
+#     local LVL=$(($SHLVL - 1))
+#   else
+#     # Either in a root shell created inside a non-root tmux session,
+#     # or not in a tmux session.
+#     local LVL=$SHLVL
+#   fi
+#   if [[ $EUID -eq 0 ]]; then
+#     local SUFFIX='%F{yellow}%n%f'$(printf '%%F{yellow}\u276f%.0s%%f' {1..$LVL})
+#   else
+#     local SUFFIX=$(printf '%%F{red}\u276f%.0s%%f' {1..$LVL})
+#   fi
+
+#   export PS1="%F{green}${SSH_TTY:+%n@%m}%f%B${SSH_TTY:+:}%b%F{blue}%B%1~%b%F{yellow}%B%(1j.*.)%(?..!)%b%f %B${SUFFIX}%b "
+
+#   if [[ -n "$TMUXING" ]]; then
+#     # Outside tmux, ZLE_RPROMPT_INDENT ends up eating the space after PS1, and
+#     # prompt still gets corrupted even if we add an extra space to compensate.
+#     export ZLE_RPROMPT_INDENT=0
+#   fi
+# }
+
+# export RPROMPT=$RPROMPT_BASE
+# export SPROMPT="zsh: correct %F{red}'%R'%f to %F{red}'%r'%f [%B%Uy%u%bes, %B%Un%u%bo, %B%Ue%u%bdit, %B%Ua%u%bbort]? "
 
 #
 # History
@@ -97,13 +140,34 @@ source $HOME/.zsh/exports
 source $HOME/.zsh/common
 source $HOME/.zsh/functions
 
-export ZSH="/Users/nikitamiloserdov/.oh-my-zsh"
-ZSH_THEME="robbyrussell"
-plugins=( git)
-
 
 if which rbenv > /dev/null; then 
   eval "$(rbenv init -)"; 
 fi
 
-source $ZSH/oh-my-zsh.sh
+# Remember each command we run.
+# function -record-command() {
+#   __NIKITA[LAST_COMMAND]="$2"
+# }
+# add-zsh-hook preexec -record-command
+
+# Update vcs_info (slow) after any command that probably changed it.
+# function -maybe-show-vcs-info() {
+#   local LAST="$__NIKITA[LAST_COMMAND]"
+
+#   # In case user just hit enter, overwrite LAST_COMMAND, because preexec
+#   # won't run and it will otherwise linger.
+#   __NIKITA[LAST_COMMAND]="<unset>"
+
+#   # Check first word; via:
+#   # http://tim.vanwerkhoven.org/post/2012/10/28/ZSH/Bash-string-manipulation
+#   case "$LAST[(w)1]" in 
+#     (cd|cp|git|rm|touch|mv|)
+#       vcs_info
+#       ;;
+#     *)
+#       ;;
+#   esac
+# }
+# add-zsh-hook precmd -maybe-show-vcs-info
+
