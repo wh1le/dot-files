@@ -1,90 +1,62 @@
 call plug#begin()
 
-" Styles
-Plug 'https://github.com/scwood/vim-hybrid'
+" Displaying
+Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
-" Navigation & Fuzzy & Search
-Plug 'https://github.com/scrooloose/nerdtree.git'
-Plug 'mileszs/ack.vim'
-Plug 'junegunn/fzf'
-Plug 'chriskempson/base16-vim'
 Plug 'Yggdroot/indentLine'
-
-" Completion
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Plug 'uplus/deoplete-solargraph'
-" Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
-
-" Modes
 Plug 'https://github.com/mhinz/vim-startify.git'
-Plug 'https://github.com/diepm/vim-rest-console.git'
+
+" File Navigation and search
+Plug 'mileszs/ack.vim'
+Plug 'https://github.com/scrooloose/nerdtree.git'
+Plug 'junegunn/fzf'
+
+" Fancy integrations
+Plug 'shime/vim-livedown'
+Plug 'https://github.com/aquach/vim-http-client.git'
 Plug 'https://github.com/tpope/vim-dispatch.git'
 Plug 'https://github.com/skalnik/vim-vroom.git' 
+Plug 'vimwiki/vimwiki'
+Plug 'tpope/vim-fugitive'
 
-" Text flow
+" Completion & Snippet
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+
+" Code flow
 Plug 'https://github.com/tpope/vim-endwise.git' 
 Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'https://github.com/tpope/vim-commentary.git'
+Plug 'https://github.com/w0rp/ale.git'
+Plug 'https://github.com/tpope/vim-repeat.git'
 Plug 'mattn/emmet-vim'
-" Plug 'brooth/far.vim'
-
-" Linters
-Plug 'https://github.com/rainerborene/vim-reek.git'
-Plug 'https://github.com/ngmy/vim-rubocop.git'
-
-" Plug 'junegunn/goyo.vim'
-" Plug 'shime/vim-livedown'
 
 " Languages
 Plug 'https://github.com/tpope/vim-rails.git' 
 Plug 'https://github.com/slim-template/vim-slim.git'
 Plug 'https://github.com/thoughtbot/vim-rspec.git'
 Plug 'pangloss/vim-javascript'
-" Plug 'https://github.com/othree/html5.vim.git'
-" Plug 'https://github.com/vim-ruby/vim-ruby.git'
-" Plug 'tomlion/vim-solidity'
 Plug 'maxmellon/vim-jsx-pretty'
-
-" Autocomplete with snippets
-" Plug 'ervandew/supertab'
-" Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-" Plug 'SirVer/ultisnips'
-" Plug 'honza/vim-snippets'
+Plug 'https://github.com/kchmck/vim-coffee-script.git'
 call plug#end()
+
+" Snipets
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 
 " NERDtree
 let NERDTreeWinPos = "right"
 let NERDTreeShowHidden=0
 let NERDTreeIgnore = ['\.pyc$', '__pycache__', 'node_modules']
-let g:NERDTreeWinSize=30
+let g:NERDTreeWinSize=40
 nmap <C-\> :NERDTreeFind<CR>
 nmap <silent> <leader><leader> :NERDTreeToggle<CR>
-
-" YouCompleteMe
-let g:SuperTabDefaultCompletionType = '<C-n>'
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:ycm_min_num_of_chars_for_completion = 4
-let g:ycm_min_num_identifier_candidate_chars = 4
-let g:ycm_enable_diagnostic_highlighting = 0
-set completeopt-=preview
-" let g:ycm_add_preview_to_completeopt = 0
-
-" Ultisnips better key bindings for UltiSnipsExpandTrigger
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-
-" CTRL-P
-" let g:ctrlp_working_path_mode = 'ra'
-" let g:ctrlp_map = '<c-p>'
-" map <leader>j :CtrlP<cr>
-" map <c-b> :CtrlPBuffer<cr>
-" set wildignore+=*/tmp/*,*/node_modules/*,*.git/,*/uploads/*,*/public/*,*/vendor/*
-" let g:ctrlp_max_height = 7
-" let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee|^tmp\cache\|system\|public\'
 
 " FZF
 map <c-p> :FZF<cr>
@@ -94,20 +66,7 @@ vmap Si S(i_<esc>f)
 au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
 
 " Airline
-" let g:airline_theme='hybrid'
-let g:airline_theme='lucius'
-
-" Vroom 
-" let g:vroom_use_bundle_exec = 1
-" let g:vroom_use_spring = 1
-" let g:vroom_use_bundle_exec = 1
-" let g:vroom_detect_spec_helper = 1
-
-" Reek 
-let g:reek_always_show = 0
-let g:reek_on_loading = 0
-let g:EasyGrepCommand=1
-let g:EasyGrepPerlStyle=1
+let g:airline_theme='base16'
 
 " VRC
 set ma
@@ -117,15 +76,6 @@ let g:vrc_elasticsearch_support = 1
 " Emmet
 let g:user_emmet_leader_key='<c-y>'
 let g:user_emmet_settings = { 'javascript.jsx' : { 'extends' : 'jsx' }}
-
-" Deoplete
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#enable_smart_case = 1
-" let g:deoplete#sources = {}
-" let g:deoplete#sources.javascript = ['ternjs']
-" let g:deoplete#sources#solargraph#command = ''
-" let g:deoplete#sources#flow#flow_bin = 'flow' 
-" call deoplete#enable()
 
 " Ack
 let g:ackhighlight = 1
@@ -142,3 +92,48 @@ map <Leader>s :call vroom#RunNearestTest()<CR>
 
 " jump to test file
 map <leader>t :A<CR>
+
+" Ale
+let b:ale_linters = {
+  \ 'javascript': ['eslint'],
+  \ 'css': ['prettier'],
+  \ 'ruby': ['rubocop'],
+  \ }
+
+let g:ale_fixers = {
+  \ 'css': ['prettier'],
+  \ 'javascript': ['eslint'],
+  \ 'ruby': ['rubocop'],
+  \ }
+
+" let g:ale_sign_warning = '▲'
+" let g:ale_sign_error = '>'
+let g:ale_sign_error = '•'
+let g:ale_sign_warning = '•'
+let g:ale_virtualenv_dir_names = []
+
+let g:ale_fix_on_save = 1
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_enter = 0
+let g:ale_set_highlights = 0
+highlight clear DimGray
+highlight clear ALEWarningSign
+let g:airline#extensions#ale#enabled = 1
+
+" Fugitive
+let g:airline#extensions#branch#enabled = 1
+
+let $FZF_DEFAULT_COMMAND='(git ls-tree -r --name-only HEAD || find . -path "*/\.*" -prune -o -type f -print -o -type l -print | sed s/^..//) 2> /dev/null'
+
+" Deoplete with tern
+set runtimepath+=~/.config/nvim/plugged/deoplete.nvim
+let g:deoplete#sources#ternjs#types = 1
+let g:deoplete#sources#ternjs#docs = 0
+let g:deoplete#sources#ternjs#tern_bin =  "/Users/nikitamiloserdov/.nvm/versions/node/v11.14.0/bin/tern"
+let g:deoplete#sources#ternjs#filetypes = ['jsx']
+let g:python_host_prog = '/usr/local/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3'
+let g:deoplete#enable_at_startup = 1
+call deoplete#custom#option('auto_complete_delay', 100)
+" Whether to include JavaScript keywords when completing something that is not a property. Default: 0
+let g:deoplete#sources#ternjs#include_keywords = 1
