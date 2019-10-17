@@ -135,9 +135,11 @@ function () {
     if [ "$BACKGROUND" != 'dark' -a "$BACKGROUND" != 'light' ]; then
       echo "warning: unknown background type in $__NIKITA[BASE16_CONFIG]"
     fi
-    color "$SCHEME"
+    # prevent different background color in tmux
+    [ -z "$TMUX" ] && color $SCHEME;
   else
     # Default.
     color default-dark
   fi
 }
+

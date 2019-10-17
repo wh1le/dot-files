@@ -65,5 +65,5 @@ export CLICOLOR=true
 # export GOPATH=~/code/go
 
 export LC_ALL=en_US.UTF-8
-eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
-
+# eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"

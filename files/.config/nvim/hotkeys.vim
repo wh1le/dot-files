@@ -1,3 +1,5 @@
+let g:mapleader=","
+
 " Treat long lines as break lines (useful when moving around in them)
 map j gj
 map k gk
@@ -6,15 +8,11 @@ map k gk
 map <space> /
 map <c-space> ?
 
-" Disable highlight when <leader><cr> is pressed
-map <silent> <leader><cr> :noh<cr>
+map <silent> <leader><cr> :noh<cr> " Disable highlight when <leader><cr> is pressed
 
-" Close the current buffer
-map <leader>bd :Bclose<cr>:tabclose<cr>gT
-
-" Close all the buffers
-map <leader>ba :bufdo bd<cr>
-
+" Buffers
+map <leader>bd :Bclose<cr>:tabclose<cr>gT " Close the current buffer
+map <leader>ba :bufdo bd<cr> " Close all the buffers
 map <leader>l :bnext<cr>
 map <leader>h :bprevious<cr>
 

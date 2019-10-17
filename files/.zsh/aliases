@@ -31,6 +31,7 @@ alias srs='rails s'
 alias src='rails c'
 
 alias gs='git status'
+alias edit="nvim"
 
 if command -v nvim &> /dev/null; then
   alias vim=nvim # Use `\vim` or `command vim` to get the real vim.
