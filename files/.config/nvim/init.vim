@@ -80,8 +80,9 @@ call plug#begin()
   " Ruby
   Plug 'https://github.com/tpope/vim-rails.git', { 'for': 'ruby' }
   Plug 'https://github.com/slim-template/vim-slim.git', { 'for': 'slim' }
-  Plug 'thoughtbot/vim-rspec'
+  Plug 'https://github.com/janko/vim-test.git', { 'for': 'ruby.spec' }
   Plug 'https://github.com/tpope/vim-dispatch.git', { 'for': 'ruby' }
+  Plug 'https://github.com/ngmy/vim-rubocop.git', { 'for': ['ruby', 'ruby.spec'] }
 
   " Javascript
   Plug 'https://github.com/elzr/vim-json.git', { 'for': 'json' }
@@ -123,6 +124,7 @@ let g:LanguageClient_serverCommands = {
     \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
     \ 'javascript.jsx': ['/usr/local/bin/javascript-typescript-stdio'],
     \ 'ruby': ['~/.rbenv/shims/solargraph', 'stdio'],
+    \ 'ruby.spec': ['~/.rbenv/shims/solargraph', 'stdio'],
     \ }
 
 let g:LanguageClient_diagnosticsDisplay = {
@@ -212,4 +214,3 @@ function! ReadOnly() abort
   else
     return ''
   endfunction
-
