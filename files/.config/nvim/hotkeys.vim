@@ -100,3 +100,6 @@ map <leader>p :bp<CR>
 map <leader>n :bn<CR> 
 "d delete buffer
 map <leader>d :bd<CR> 
+
+map <silent> <leader>s :TestNearest<CR>
+map <silent> <leader>t :TestFile<CR>

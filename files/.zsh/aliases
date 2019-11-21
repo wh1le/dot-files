@@ -32,6 +32,8 @@ alias src='rails c'
 
 alias gs='git status'
 alias edit="nvim"
+alias bat="bat --theme=base16"
+alias afk='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
 
 if command -v nvim &> /dev/null; then
   alias vim=nvim # Use `\vim` or `command vim` to get the real vim.
