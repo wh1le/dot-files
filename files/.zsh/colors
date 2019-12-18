@@ -2,7 +2,7 @@
 # Colors
 #
 
-__NIKITA[BASE16_CONFIG]=~/.vim/.base16
+__NIKITA[BASE16_CONFIG]=~/.config/.base16
 
 # Takes a hex color in the form of "RRGGBB" and outputs its luma (0-255, where
 # 0 is black and 255 is white).

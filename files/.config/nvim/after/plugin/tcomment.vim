@@ -14,4 +14,3 @@ let g:tcomment_mapleader_uncomment_anyway='gu'
 " let g:indentLine_char_list = ['¦', '┊']
 let g:indentLine_char_list = ['·']
 let g:indentLine_enabled = 1
-

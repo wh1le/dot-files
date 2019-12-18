@@ -1,5 +1,7 @@
 export PAGER=less
 
+export FZF_DEFAULT_OPTS="--height 20% --ansi --layout=reverse --preview-window 'right:60%' --preview 'bat --color=always --style='changes' --theme='base16' {}'"
+
 if which nvim &> /dev/null; then
   export EDITOR=$(which nvim)
 elif [ -x "$HOME/bin/vim" ]; then
