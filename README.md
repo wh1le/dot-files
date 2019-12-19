@@ -10,5 +10,6 @@
  1. [Z Shell](https://github.com/zsh-users/zsh)
 
 ### TODO list:
- - Ansible delivery;
- - Improve shell promt;
+ - [ ] Ansible delivery;
+ - [ ] Change promt style;
+ - [ ] FIX nerdtree icons
