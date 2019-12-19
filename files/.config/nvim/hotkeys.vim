@@ -100,3 +100,12 @@ map <leader>p :bp<CR>
 map <leader>n :bn<CR> 
 "d delete buffer
 map <leader>d :bd<CR> 
+
+" VimWiki
+nmap <leader>tt <Plug>VimwikiToggleListItem
+nmap <Leader>wf <Plug>VimwikiFollowLink
+nmap <Leader>wq <Plug>VimwikiVSplitLink
+
+" Vim Test
+map <silent> <leader>s :TestNearest<CR>
+map <silent> <leader>t :TestFile<CR>

@@ -1,2 +1,2 @@
 *.DS_Store
-files/.config/nvim/autoload/plugged/**
+files/.config/nvim/plugged/**

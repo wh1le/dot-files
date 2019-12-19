@@ -1,1 +1,1 @@
-autocmd BufNewFile,BufRead .pryrc,Guardfile set filetype=pidor
+autocmd BufNewFile,BufRead .pryrc,Guardfile set filetype=ruby
