@@ -8,7 +8,6 @@ call plug#begin()
   " Layout
   Plug 'chriskempson/base16-vim'
   Plug 'https://github.com/Yggdroot/indentLine.git'
-  Plug 'https://github.com/ryanoasis/vim-devicons.git'
 
   " Intelegence
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -34,6 +33,8 @@ call plug#begin()
   Plug 'https://github.com/kchmck/vim-coffee-script.git', { 'for': 'coffee' }
 
   " Navigation
+  Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+  Plug 'https://github.com/ryanoasis/vim-devicons.git'
   Plug 'https://github.com/scrooloose/nerdtree.git'
   Plug '/usr/local/opt/fzf'
   Plug 'dyng/ctrlsf.vim'
