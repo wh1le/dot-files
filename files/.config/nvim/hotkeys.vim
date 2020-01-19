@@ -62,7 +62,6 @@ map <leader>co ggVGy:tabnew<cr>:set syntax=qf<cr>pgg
 map <leader>n :cn<cr>
 map <leader>p :cp<cr>
 
-
 " Shortcuts using <leader>
 map <leader>sn ]s
 map <leader>sp [s

@@ -33,7 +33,7 @@
 
 " TUI
 
-    set number relativenumber
+    set number
     set numberwidth=4
     set showtabline=0
     set so=8

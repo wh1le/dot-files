@@ -37,15 +37,14 @@ function! ReadOnly() abort
 endfunction
 
 set statusline=
-set statusline+=%{StatuslineMode()}
+set statusline+=\%{StatuslineMode()}
 set statusline+=%{ReadOnly()} 
 set statusline+=%{PasteForStatusline()}
+set statusline+=\ [\ %*
 set statusline+=\%*
-set statusline+=%#keyword#\ %f
+set statusline+=\%f
 set statusline+=\ %*
-set statusline+=\ ‹‹\ %*
-set statusline+=%{FugitiveHead()}
-set statusline+=\ ››\ %*
+set statusline+=\]\ %*
 set statusline+=%=
 
 set statusline+=\ ‹‹

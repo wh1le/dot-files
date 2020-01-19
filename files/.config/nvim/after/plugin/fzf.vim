@@ -1,5 +1,5 @@
 " FZF
-let $FZF_DEFAULT_COMMAND="ag -g ''"
+let $FZF_DEFAULT_COMMAND="ag -g '' --path-to-ignore ~/.config/nvim/ignore"
 let $FZF_DEFAULT_OPTS="--height 20% --ansi --layout=reverse --preview-window 'right:60%' --preview 'bat --color=always --style='changes' --theme='base16' {}'"
 
 map <c-p> :FZF<cr>
@@ -18,7 +18,7 @@ if has('nvim')
           \ 'row': 1,
           \ 'col': col + col_offset,
           \ 'width': width * 2 / 1,
-          \ 'height': height / 2
+          \ 'height': float2nr(height / 0.5)
           \ }
 
     let win = nvim_open_win(buf, v:true, opts)
