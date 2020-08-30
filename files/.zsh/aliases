@@ -30,7 +30,11 @@ alias v=vim
 alias srs='rails s'
 alias src='rails c'
 
+alias ta='tmux attach'
+
 alias gs='git status'
+alias gc='git checkout'
+alias gr='git rebase -i'
 alias edit="nvim"
 alias bat="bat --theme=base16"
 alias afk='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'

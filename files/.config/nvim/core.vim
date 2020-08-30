@@ -1,7 +1,8 @@
 " Basic
 
-    set clipboard=unnamedplus
+    " set clipboard=unnamedplus " Copy to clipboard
     set mouse=a
+    set ttimeoutlen=50
     set foldlevel=99
     set noswapfile
     set encoding=UTF-8
