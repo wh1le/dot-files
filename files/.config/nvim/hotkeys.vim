@@ -91,7 +91,10 @@ vmap <Leader>y :w! ~/.vbuf<CR>
 "copy the current line to the buffer file if no visual selection
 nmap <Leader>y :.w! ~/.vbuf<CR>
 "paste the contents of the buffer file
-nmap <Leader>r :r ~/.vbuf<CR>
+" nmap <Leader>r :r ~/.vbuf<CR>
+
+nmap <silent> <leader>r :TestLast<CR>
+nmap <silent> <leader>T :TestFile<CR>
 
 "p previous buffer
 map <leader>p :bp<CR> 
